@@ -1,0 +1,217 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{57B7652F-7BAB-4158-955C-B9B0B394AB17}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>Cracking</RootNamespace>
+    <AssemblyName>Cracking</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ArraysAndStrings.cs" />
+    <Compile Include="Arrays\BigArray.cs" />
+    <Compile Include="Arrays\HashTable.cs" />
+    <Compile Include="Arrays\LengthOfLongestSubArrayWithContiguousElements.cs" />
+    <Compile Include="Arrays\LongestContiguousIncreasingSubArray.cs" />
+    <Compile Include="Arrays\MaxDiff.cs" />
+    <Compile Include="Arrays\PrintLastKLines.cs" />
+    <Compile Include="Arrays\PrintMatrixInSpiralForm.cs" />
+    <Compile Include="Arrays\QuickSort.cs" />
+    <Compile Include="Arrays\PartitionArrayAroundPivot.cs" />
+    <Compile Include="Arrays\Rabin_Karp.cs" />
+    <Compile Include="Arrays\RepeatedElements.cs" />
+    <Compile Include="Arrays\ReverseString.cs" />
+    <Compile Include="Arrays\RotateArray.cs" />
+    <Compile Include="Arrays\RotateMatrix.cs" />
+    <Compile Include="Arrays\Segregate0sAnd1s.cs" />
+    <Compile Include="Arrays\ShuffleArray.cs" />
+    <Compile Include="Arrays\Sort012.cs" />
+    <Compile Include="Arrays\SubArraysWithSum.cs" />
+    <Compile Include="Arrays\SubString.cs" />
+    <Compile Include="Arrays\ThreeWayPartitioning.cs" />
+    <Compile Include="BitManipulation\BitCountToFlipToConvertIntToInt.cs" />
+    <Compile Include="BitManipulation\DrawLine.cs" />
+    <Compile Include="BitManipulation\FloatingNumberToBinary.cs" />
+    <Compile Include="BitManipulation\FractionBinary.cs" />
+    <Compile Include="BitManipulation\InsertIntegerIntoInteger.cs" />
+    <Compile Include="BitManipulation\IsPowerOf2.cs" />
+    <Compile Include="BitManipulation\Max1sSequenceBySettingOneBit.cs" />
+    <Compile Include="BitManipulation\NextPrevNumberWithSameCardinality.cs" />
+    <Compile Include="BitManipulation\SwapOddEvenBits.cs" />
+    <Compile Include="DynamicProgramming\BooleanEvaluation_CountWays.cs" />
+    <Compile Include="DynamicProgramming\BoxStacking_WithoutRotation.cs" />
+    <Compile Include="DynamicProgramming\BoxStacking_WithRotation.cs" />
+    <Compile Include="DynamicProgramming\CatalanNumber.cs" />
+    <Compile Include="DynamicProgramming\CoinChangeMinCount.cs" />
+    <Compile Include="DynamicProgramming\CoinChangeTotalWays.cs" />
+    <Compile Include="DynamicProgramming\CountPathsInMatrix.cs" />
+    <Compile Include="DynamicProgramming\Fib.cs" />
+    <Compile Include="DynamicProgramming\LongestIncreasingSubsequence.cs" />
+    <Compile Include="DynamicProgramming\MagicIndex.cs" />
+    <Compile Include="DynamicProgramming\MinCostPath.cs" />
+    <Compile Include="DynamicProgramming\NQueensPlacement.cs" />
+    <Compile Include="DynamicProgramming\PaintFill.cs" />
+    <Compile Include="DynamicProgramming\Parens.cs" />
+    <Compile Include="DynamicProgramming\PermutationNoDuplicates.cs" />
+    <Compile Include="DynamicProgramming\PermutationWithDuplicates.cs" />
+    <Compile Include="DynamicProgramming\PowerSet.cs" />
+    <Compile Include="DynamicProgramming\PrintAllPathsInMatrix.cs" />
+    <Compile Include="DynamicProgramming\RecursiveMultiply.cs" />
+    <Compile Include="DynamicProgramming\RobotInGrid.cs" />
+    <Compile Include="DynamicProgramming\TowersOfHanoi.cs" />
+    <Compile Include="DynamicProgramming\TripleStep.cs" />
+    <Compile Include="Graphs\BalanceBST.cs" />
+    <Compile Include="Graphs\BST.cs" />
+    <Compile Include="Graphs\BuildOrder.cs" />
+    <Compile Include="Graphs\CheckBalanced.cs" />
+    <Compile Include="Graphs\CheckSubtree.cs" />
+    <Compile Include="Graphs\FirstCommonAncestor.cs" />
+    <Compile Include="Graphs\Graph.cs" />
+    <Compile Include="Graphs\LevelLinkedLists.cs" />
+    <Compile Include="Graphs\Heap.cs" />
+    <Compile Include="Graphs\MinimalTreeFromSortedArray.cs" />
+    <Compile Include="Graphs\PathsWithSum.cs" />
+    <Compile Include="Graphs\Predecessor_Successor.cs" />
+    <Compile Include="Graphs\RandomNode.cs" />
+    <Compile Include="Graphs\TopologicalSort.cs" />
+    <Compile Include="Graphs\TrieNode1.cs" />
+    <Compile Include="Graphs\TrieNode2.cs" />
+    <Compile Include="Graphs\TrieNode3.cs" />
+    <Compile Include="Graphs\ValidateBST.cs" />
+    <Compile Include="Hard\1.AddWithoutPlus.cs" />
+    <Compile Include="Hard\2.Shuffle.cs" />
+    <Compile Include="Hard\4.MissingNumber.cs" />
+    <Compile Include="Hard\3.RandomSet.cs" />
+    <Compile Include="Hard\5.LettersAndNumbers.cs" />
+    <Compile Include="Hard\6.CountOf2s.cs" />
+    <Compile Include="Hard\7.BabyNames.cs" />
+    <Compile Include="Hard\8.CircusTower.cs" />
+    <Compile Include="Hard\9.KthMultiple.cs" />
+    <Compile Include="Hard\10.MajorityElement.cs" />
+    <Compile Include="Hard\11.WordDistance.cs" />
+    <Compile Include="LinkedLists\DeleteMiddleNode.cs" />
+    <Compile Include="LinkedLists\EvenOddRearrangement.cs" />
+    <Compile Include="LinkedLists\FlattenList.cs" />
+    <Compile Include="LinkedLists\IntersectionNode.cs" />
+    <Compile Include="LinkedLists\IsLinkedListCyclic.cs" />
+    <Compile Include="LinkedLists\IsPalendrome.cs" />
+    <Compile Include="LinkedLists\KthElementFromLast.cs" />
+    <Compile Include="LinkedLists\LinkedList.cs" />
+    <Compile Include="LinkedLists\LoopStart.cs" />
+    <Compile Include="LinkedLists\MedianOfCLL.cs" />
+    <Compile Include="LinkedLists\Middle.cs" />
+    <Compile Include="LinkedLists\Merge2SortedLists.cs" />
+    <Compile Include="LinkedLists\PartitionList.cs" />
+    <Compile Include="LinkedLists\RemoveDuplicates.cs" />
+    <Compile Include="LinkedLists\ReverseLinkedList.cs" />
+    <Compile Include="LinkedLists\SortLinkedList.cs" />
+    <Compile Include="LinkedLists\SumLists.cs" />
+    <Compile Include="LinkedLists\Zip.cs" />
+    <Compile Include="Moderate\1.NumberSwapper.cs" />
+    <Compile Include="Moderate\20.T9.cs" />
+    <Compile Include="Moderate\5.FactorialZeros.cs" />
+    <Compile Include="Moderate\4.TicTacToe_Win.cs" />
+    <Compile Include="Moderate\6.SmallestDifference.cs" />
+    <Compile Include="Moderate\7.MaxOf2Numbers.cs" />
+    <Compile Include="Moderate\11.DivingBoard.cs" />
+    <Compile Include="Moderate\8.EnglishInteger.cs" />
+    <Compile Include="Moderate\10.LivingPeople.cs" />
+    <Compile Include="Moderate\12.XMLEncoding.cs" />
+    <Compile Include="Moderate\13.BisectSquares.cs" />
+    <Compile Include="Moderate\15.MasterMind.cs" />
+    <Compile Include="Moderate\16.SubSort.cs" />
+    <Compile Include="Moderate\17.ContiguousSequenceMaxSum.cs" />
+    <Compile Include="Moderate\24.PairsWithSum.cs" />
+    <Compile Include="Moderate\Calculator.cs" />
+    <Compile Include="Moderate\SumSwap.cs" />
+    <Compile Include="Primitives\BaseConversion.cs" />
+    <Compile Include="Primitives\ConvertBetweenStrAndInt.cs" />
+    <Compile Include="Primitives\DecodeExcelColumnsToNumbers.cs" />
+    <Compile Include="Primitives\GCD.cs" />
+    <Compile Include="Primitives\NumberDivisors.cs" />
+    <Compile Include="Primitives\PrimeNumbersList.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Sorting_Searching\BinarySearch.cs" />
+    <Compile Include="Sorting_Searching\BubbleSort.cs" />
+    <Compile Include="Sorting_Searching\BucketSort.cs" />
+    <Compile Include="Sorting_Searching\CountingSort.cs" />
+    <Compile Include="Sorting_Searching\FindDuplicates_BitSet.cs" />
+    <Compile Include="Sorting_Searching\GroupAnagrams.cs" />
+    <Compile Include="Sorting_Searching\HeapSort.cs" />
+    <Compile Include="Sorting_Searching\InsertionSort.cs" />
+    <Compile Include="Sorting_Searching\IsAllCharsUnique.cs" />
+    <Compile Include="Sorting_Searching\MergeSort.cs" />
+    <Compile Include="Sorting_Searching\MissingInt_Bits.cs" />
+    <Compile Include="Sorting_Searching\PeaksAndValleys.cs" />
+    <Compile Include="Sorting_Searching\QuickSort.cs" />
+    <Compile Include="Sorting_Searching\RadixSort.cs" />
+    <Compile Include="Sorting_Searching\RankFromStream.cs" />
+    <Compile Include="Sorting_Searching\SelectionSort.cs" />
+    <Compile Include="Sorting_Searching\SortedMatrixSearch.cs" />
+    <Compile Include="Sorting_Searching\SortedMerge.cs" />
+    <Compile Include="Sorting_Searching\SortedSearch_NoSize.cs" />
+    <Compile Include="Sorting_Searching\SparseSearch.cs" />
+    <Compile Include="StacksQueues\AnimalShelter.cs" />
+    <Compile Include="StacksQueues\MultiStack.cs" />
+    <Compile Include="StacksQueues\GenericMyQueue.cs" />
+    <Compile Include="StacksQueues\GenericMyStack.cs" />
+    <Compile Include="StacksQueues\QueueUsing2Stacks.cs" />
+    <Compile Include="StacksQueues\ReverseStack.cs" />
+    <Compile Include="StacksQueues\SortStack.cs" />
+    <Compile Include="StacksQueues\StackUsing1Queue.cs" />
+    <Compile Include="StacksQueues\StackUsing2Queues.cs" />
+    <Compile Include="StacksQueues\StackWithMinMax2.cs" />
+    <Compile Include="StacksQueues\StackWithMinMax.cs" />
+    <Compile Include="Test.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <Compile Include="Moderate\9.ArithmaticOperations.cs" />
+    <Compile Include="Moderate\19.PondSizes.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="StacksQueues\TextFile1.txt" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
