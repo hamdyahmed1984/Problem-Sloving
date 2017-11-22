@@ -9,6 +9,53 @@ namespace Tests
     public class UnitTest1
     {
         [TestMethod]
+        public void SmallestKNumbers_Test()
+        {
+            int[] arr = { 20, 2, 4, 10, 29, -5, 1, 100, 2 };
+            int k = 3;
+
+            SmallestKNumbers skn = new SmallestKNumbers();
+
+            int[] actual = new int[k];
+            //actual = skn.FindSmallestKNumbers(arr, k);
+            //actual = skn.FindSmallestKNumbers_MaxHeap(arr, k);
+            //actual = skn.FindSmallestKNumbers_NK(arr, k);
+            actual = skn.FindSmallestKNumbers_SelectionRank(arr, k);
+        }
+
+        [TestMethod]
+        public void ReSpace_Test()
+        {
+            string sentence = "inthisisawesome";
+            HashSet<string> dictionary = new HashSet<string>()
+            {
+                "this",
+                "is",
+                "awesome"
+            };
+            
+            ReSpace rs = new ReSpace();
+            //string actual = rs.BestSplit(dictionary, sentence);
+
+            ReSpace.ParseResult actual = rs.ReSpaceSentence(sentence, dictionary);
+            //string str = rs.BestSplit(dictionary, sentence);
+
+            string sentence2 = "jesslookedjustliketimherbrother";
+            HashSet<string> dictionary2 = new HashSet<string>()
+            {
+                "looked",
+                "just",
+                "like",
+                "her",
+                "brother"
+            };
+            actual = rs.ReSpaceSentence(sentence2, dictionary2);
+            //string str2 = rs.BestSplit(dictionary2, sentence2);
+
+            var x = rs.parse(sentence2, dictionary2);
+        }
+
+        [TestMethod]
         public void BiNode_Test()
         {
             BiNodeDS bn = new BiNodeDS();

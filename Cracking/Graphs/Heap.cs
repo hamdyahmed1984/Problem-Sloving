@@ -8,7 +8,7 @@ namespace Cracking.Graphs
 {
     /// <summary>
     /// Heap should be a COMPLETE BINARY tree(all levels are complete except, probably the last level, and all nodes should fill from left to right).
-    /// Instead of creating HeapNode we created array to hold the date.
+    /// Instead of creating HeapNode we created array to hold the data.
     /// the root node is at index 0. the left child node is as index: (ParentIndex * 2 + 1), the right child node is at index:(ParentIndex * 2 + 2)
     /// and the parent node is at index: ((childIndex - 1) / 2).
     /// 
@@ -36,7 +36,7 @@ namespace Cracking.Graphs
         {
             if (_size == _capacity)
             {
-                _capacity += 2;
+                _capacity *= 2;
                 Array.Resize(ref items, _capacity);
             }
         }
@@ -51,17 +51,22 @@ namespace Cracking.Graphs
 
         /*
          *I think we need to call the HasLeftChild, HasRightChild and HasParent before we call GetLeftChild, GetRightChild and GetParent to avoid exceptions
-         * when we pass get index out of range.
+         * when we we recive index out of range.
          */
         protected int GetLeftChild(int parentIndex) { return items[GetLeftChildIndex(parentIndex)]; }
         protected int GetRightChild(int parentIndex) { return items[GetRightChildIndex(parentIndex)]; }
         protected int GetParent(int childIndex) { return items[GetParentIndex(childIndex)]; }
         protected int GetItem(int index) { return items[index]; }
 
+        public int Size()
+        {
+            return _size;
+        }
+
         public int Peek()
         {
             if (_size == 0) throw new InvalidOperationException("Heap is empty.");
-            return GetItem(0);//Peek returns the min item from the heap, which is the root.
+            return GetItem(0);//Peek returns the min item from the min-heap and max item form the max-heap, which is the root.
         }
 
         public void Add(int itm)
@@ -73,7 +78,7 @@ namespace Cracking.Graphs
         }
 
         /// <summary>
-        /// Poll means removing the min item, the root of the heap
+        /// Poll means removing the min/max item, the root of the heap
         /// </summary>
         public int Poll()
         {
@@ -109,7 +114,7 @@ namespace Cracking.Graphs
         protected override void HeapifyDown()
         {
             int index = 0;
-            while (HasLeftChild(index))//If there is no left node, there is no right node and the heap should be a complete binary tree
+            while (HasLeftChild(index))//If there is no left node, there is no right node. this is because the heap should be a complete binary tree(i.e be filled from left to right)
             {
                 int smallerChildIndex = GetLeftChildIndex(index);
                 if (HasRightChild(index) && GetRightChild(index) < GetLeftChild(index))

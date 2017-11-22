@@ -129,6 +129,8 @@
     <Compile Include="Hard\10.MajorityElement.cs" />
     <Compile Include="Hard\11.WordDistance.cs" />
     <Compile Include="Hard\12.BiNode.cs" />
+    <Compile Include="Hard\13.ReSpace.cs" />
+    <Compile Include="Hard\14.SmallestKNumbers.cs" />
     <Compile Include="LinkedLists\DeleteMiddleNode.cs" />
     <Compile Include="LinkedLists\EvenOddRearrangement.cs" />
     <Compile Include="LinkedLists\FlattenList.cs" />
