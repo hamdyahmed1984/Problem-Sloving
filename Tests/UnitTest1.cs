@@ -9,6 +9,29 @@ namespace Tests
     public class UnitTest1
     {
         [TestMethod]
+        public void BiNode_Test()
+        {
+            BiNodeDS bn = new BiNodeDS();
+            BiNodeDS.BiNode[] nodes = new BiNodeDS.BiNode[7];
+            for (int i = 0; i < nodes.Length; i++)
+                nodes[i] = new BiNodeDS.BiNode(i);
+            BiNodeDS.BiNode root = nodes[4];
+            nodes[4].Node1 = nodes[2];
+            nodes[4].Node2 = nodes[5];
+            nodes[2].Node1 = nodes[1];
+            nodes[2].Node2 = nodes[3];
+            nodes[1].Node1 = nodes[0];
+            nodes[5].Node2 = nodes[6];
+
+            //var head = bn.ConvertBST_ToDLL(root);
+            var head = bn.ConvertBST_ToDLL2(root);
+            //bn.ConvertBST_ToDLL3(root);
+
+            string output = bn.PrintList(root);
+            System.Diagnostics.Trace.WriteLine(output);
+        }
+
+        [TestMethod]
         public void WordDistance_Test()
         {
             WordDistance wd = new WordDistance();
