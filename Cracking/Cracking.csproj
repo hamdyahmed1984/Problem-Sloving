@@ -131,6 +131,7 @@
     <Compile Include="Hard\12.BiNode.cs" />
     <Compile Include="Hard\13.ReSpace.cs" />
     <Compile Include="Hard\14.SmallestKNumbers.cs" />
+    <Compile Include="Hard\15.LongestWord.cs" />
     <Compile Include="LinkedLists\DeleteMiddleNode.cs" />
     <Compile Include="LinkedLists\EvenOddRearrangement.cs" />
     <Compile Include="LinkedLists\FlattenList.cs" />

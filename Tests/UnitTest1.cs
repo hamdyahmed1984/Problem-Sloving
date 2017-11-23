@@ -9,6 +9,22 @@ namespace Tests
     public class UnitTest1
     {
         [TestMethod]
+        public void LongestWord_Test()
+        {
+            LongestWord lw = new LongestWord();
+            //string[] words = { "ThereAfterThemath", "AfterThem", "There", "math", "The", "he" };
+            string[] words = { "cat", "dog", "cat dog", "catsdog", "rat", "catdogratcatdog" };
+            string test = lw.FindLongestCompoundWord_2Loops(words);
+            string expected = "catdogratcatdog";
+            string actual = "";
+            
+            //actual = lw.FindLongestCompoundWord_TwoWords(words);
+            //Assert.AreEqual(expected, actual);
+            actual = lw.FindLongestCompoundWord_Memo(words);
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
         public void SmallestKNumbers_Test()
         {
             int[] arr = { 20, 2, 4, 10, 29, -5, 1, 100, 2 };
