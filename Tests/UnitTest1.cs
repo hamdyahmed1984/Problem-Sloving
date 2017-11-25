@@ -9,6 +9,21 @@ namespace Tests
     public class UnitTest1
     {
         [TestMethod]
+        public void Missing2Numbers_Test()
+        {
+            Missing2Numbers mn = new Missing2Numbers();
+            int[] arr = { 1, 2, 10, 4, 6, 7, 8, 3, 9 };//missing is 5
+            int missingNumber = 0;
+            missingNumber = mn.FindMissingNumber_UsingSum(arr);
+            missingNumber = mn.FindMissingNumber_UsingSquareSum(arr);
+            missingNumber = mn.FindMissingNumber_UsingProduct(arr);
+            missingNumber = mn.FindMissingNumber_UsingXOR(arr);
+
+            int[] arr2 = { 1, 2, 10, 5, 7, 6, 8, 9 };//missing 2 numbers are 3 and 4
+            int[] missing2Numbers = mn.FindMissing2Numbers(arr2);
+        }
+
+        [TestMethod]
         public void ShortestSupersequence_Test()
         {
             ShortestSuperSequence sss = new ShortestSuperSequence();

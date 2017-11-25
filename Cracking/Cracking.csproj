@@ -135,6 +135,7 @@
     <Compile Include="Hard\16.TheMasseuse.cs" />
     <Compile Include="Hard\17.MultiSearch.cs" />
     <Compile Include="Hard\18.ShortestSuperSequence.cs" />
+    <Compile Include="Hard\19.Missing2Numbers.cs" />
     <Compile Include="LinkedLists\DeleteMiddleNode.cs" />
     <Compile Include="LinkedLists\EvenOddRearrangement.cs" />
     <Compile Include="LinkedLists\FlattenList.cs" />
