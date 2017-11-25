@@ -13,6 +13,12 @@ namespace Cracking.Graphs
     {
         public bool IsLeaf;
         public Dictionary<char, TrieNode2> Children = new Dictionary<char, TrieNode2>();
+        public char Character { get; set; }//This prop is used to just know the character of the node easily
+
+        public TrieNode2 GetChild(char c)
+        {
+            return Children.ContainsKey(c) ? Children[c] : null;
+        }
 
         public void Insert(string word)
         {
@@ -21,7 +27,7 @@ namespace Cracking.Graphs
             {
                 char c = word[i];
                 if (!node.Children.ContainsKey(c))
-                    node.Children.Add(c, new TrieNode2());
+                    node.Children.Add(c, new TrieNode2() { Character = c });//Create the node and assign the character property
                 node = node.Children[c];
             }
             node.IsLeaf = true;
