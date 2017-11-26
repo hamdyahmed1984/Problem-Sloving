@@ -9,6 +9,19 @@ namespace Tests
     public class UnitTest1
     {
         [TestMethod]
+        public void ContinuousMedian_Test()
+        {
+            ContinuousMedian cm = new ContinuousMedian();
+            Random rand = new Random();
+            double currentMedian = 0;
+            for(int i = 0; i < 10; i++)
+            {
+                cm.AddNewNumber(rand.Next(1, 10));
+                currentMedian = cm.GetMedian();
+            }
+        }
+
+        [TestMethod]
         public void Missing2Numbers_Test()
         {
             Missing2Numbers mn = new Missing2Numbers();
