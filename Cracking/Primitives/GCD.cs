@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Cracking.Primitives
 {
-    class GCD
+    public class GCD
     {
         public static int GetGCD1(int a, int b)
         {

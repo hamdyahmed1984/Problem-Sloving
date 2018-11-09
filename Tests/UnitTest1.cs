@@ -1,13 +1,116 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Cracking.Hard;
+using Cracking.Primitives;
 using System.Collections.Generic;
+using System.Linq;
+using DataStructures.Trees;
 
 namespace Tests
 {
     [TestClass]
     public class UnitTest1
     {
+        [TestMethod]
+        public void MerkleTree_Test()
+        {
+            List<char> lst = "0123456789".ToList();
+            MerkleTree<char> tree = new MerkleTree<char>(lst);
+
+            string treeHash = tree.Root.Hash;
+        }
+
+        [TestMethod]
+        public void GCD_Test()
+        {
+            int[] a = { 100, 99, 98, 97, 96, 95, 94, 93, 92, 91 };
+            int[] b = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+            int lcm = LCM_All(a);
+            int gcd = GCD_All(b);
+
+            int count = 0;
+            for (int i = lcm; i <= gcd; i += lcm)
+                if (gcd % i == 0) count++;
+
+        }
+
+        private static int GCD_All(int[] arr)
+        {
+            if (arr.Length == 0) return 0;
+            int gcd = arr[0];
+            for (int i = 1; i < arr.Length; i++)
+                gcd = GCD(gcd, arr[i]);
+            return gcd;
+        }
+        private static int LCM_All(int[] arr)
+        {
+            if (arr.Length == 0) return 0;
+            int lcm = arr[0];
+            for (int i = 1; i < arr.Length; i++)
+                lcm = LCM(lcm, arr[i]);
+            return lcm;
+        }
+        private static int GCD(int a, int b)
+        {
+            /*if (a == 0 || b == 0) return 0;
+            if (a == b) return a;
+            if (a > b) return GCD(a - b, b);
+            else return GCD(a, b - a);*/
+            if (b == 0)
+                return a;
+           return GCD(b, a % b);
+        }
+        private static int LCM(int a, int b)
+        {
+            int gcd = GCD(a, b);
+            if (gcd == 0) return 0;
+            return a * b / gcd;
+        }
+
+        [TestMethod]
+        public void MaxSumSubMattix_Test()
+        {
+            
+            MaxSumSubMatrix m = new MaxSumSubMatrix();
+            int[][] matrix = new int[4][]
+            {
+                new int[]{  1 ,  2, -1, -4, -20},
+                new int[]{ -8,  -3,  4,  2,  1},
+                new int[]{  3,   8,  10, 1,  3},
+                new int[]{ -4,  -1,  1,  7, -6}
+            };
+
+            MaxSumSubMatrix.SubMatrix actual1 = m.GetSubMatrixWithMaxSum_BF(matrix);
+            MaxSumSubMatrix.SubMatrix actual2 = m.GetSubMatrixWithMaxSum_Optimized(matrix);
+            MaxSumSubMatrix.SubMatrix actual3 = m.GetSubMatrixWithMaxSum_Optimal(matrix);
+        }
+
+        [TestMethod]
+        public void MaxSquareMatrix_Test()
+        {
+            MaxSquareMatrix msm = new MaxSquareMatrix();
+            int[][] matrix = new int[5][]
+            {
+                new int[]{1,0,0,0,0 },
+                new int[]{0,0,0,0,0 },
+                new int[]{0,0,0,0,1},
+                new int[]{0,0,0,0,0},
+                new int[]{1,0,0,0,0}
+            };
+
+            MaxSquareMatrix.SubSquareMatrix square = msm.FindSubSquareMatrixWithZeroBordere_Optimal(matrix);
+        }
+
+        [TestMethod]
+        public void VolumeOfHistogram_Test()
+        {
+            VolumeOfHistogram vh = new VolumeOfHistogram();
+            int[] histogram = { 0, 0, 4, 0, 0, 6, 0, 0, 3, 0, 5, 0, 1, 0, 0, 0 };
+            int expected = 26;
+            int actual = vh.GetHistogramVolume_Simplified_Optimized(histogram);
+            Assert.AreEqual(expected, actual);
+        }
+
         [TestMethod]
         public void ContinuousMedian_Test()
         {

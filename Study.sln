@@ -19,6 +19,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cracking", "Cracking\Cracki
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tests", "Tests\Tests.csproj", "{11D0FD95-C1EB-428B-95CC-9C203C737225}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DesignPatterns", "DesignPatterns\DesignPatterns.csproj", "{FF116CC3-C700-425F-BBE0-14D6ACF3593D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -57,41 +59,15 @@ Global
 		{11D0FD95-C1EB-428B-95CC-9C203C737225}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{11D0FD95-C1EB-428B-95CC-9C203C737225}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{11D0FD95-C1EB-428B-95CC-9C203C737225}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FF116CC3-C700-425F-BBE0-14D6ACF3593D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FF116CC3-C700-425F-BBE0-14D6ACF3593D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FF116CC3-C700-425F-BBE0-14D6ACF3593D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FF116CC3-C700-425F-BBE0-14D6ACF3593D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {794E3A64-A598-4C60-803D-E95226C81452}
-	EndGlobalSection
-	GlobalSection(TeamFoundationVersionControl) = preSolution
-		SccNumberOfProjects = 9
-		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
-		SccTeamFoundationServer = https://hamdyahmed1984.visualstudio.com/
-		SccLocalPath0 = .
-		SccProjectUniqueName1 = DataStructures\\DataStructures.csproj
-		SccProjectName1 = DataStructures
-		SccLocalPath1 = DataStructures
-		SccProjectUniqueName2 = Algorithms\\Algorithms.csproj
-		SccProjectName2 = Algorithms
-		SccLocalPath2 = Algorithms
-		SccProjectUniqueName3 = Sorting\\Sorting.csproj
-		SccProjectName3 = Sorting
-		SccLocalPath3 = Sorting
-		SccProjectUniqueName4 = Misc\\Misc.csproj
-		SccProjectName4 = Misc
-		SccLocalPath4 = Misc
-		SccProjectUniqueName5 = Graph\\Graph.csproj
-		SccProjectName5 = Graph
-		SccLocalPath5 = Graph
-		SccProjectUniqueName6 = Problems\\Problems.csproj
-		SccProjectName6 = Problems
-		SccLocalPath6 = Problems
-		SccProjectUniqueName7 = Cracking\\Cracking.csproj
-		SccProjectName7 = Cracking
-		SccLocalPath7 = Cracking
-		SccProjectUniqueName8 = Tests\\Tests.csproj
-		SccProjectName8 = Tests
-		SccLocalPath8 = Tests
 	EndGlobalSection
 EndGlobal
