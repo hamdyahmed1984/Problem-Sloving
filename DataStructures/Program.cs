@@ -11,38 +11,41 @@ namespace DataStructures
     {
         static void Main(string[] args)
         {
-            BST<int> bst = new BST<int>();
-            bst.insertNode(5);
-            bst.insertNode(2);
-            bst.insertNode(8);
-            bst.insertNode(6);
-            bst.insertNode(10);
-            bst.insertNode(1);            
-            bst.insertNode(4);
-            bst.insertNode(3);
-            bst.insertNode(7);
-            bst.insertNode(9);
+            List<char> lst = "0123456789".ToList();
+            MerkleTree<char> tree = new MerkleTree<char>(lst);
 
-            bst.removeNode(8);
+            //BST<int> bst = new BST<int>();
+            //bst.insertNode(5);
+            //bst.insertNode(2);
+            //bst.insertNode(8);
+            //bst.insertNode(6);
+            //bst.insertNode(10);
+            //bst.insertNode(1);            
+            //bst.insertNode(4);
+            //bst.insertNode(3);
+            //bst.insertNode(7);
+            //bst.insertNode(9);
 
-            var x = bst.getNode(4);
-            Console.WriteLine(x.Value.ToString());
-            Trees.Node<int> parent=null;
-            var xx = bst.getNode(2, out parent);
-            Console.WriteLine(x.Value.ToString());
-            var max = bst.getMaxNode();
-            Console.WriteLine(max != null ? max.Value.ToString() : "NONE");
-            var min = bst.getMinNode();
-            Console.WriteLine(min != null ? min.Value.ToString() : "NONE");
+            //bst.removeNode(8);
+
+            //var x = bst.getNode(4);
+            //Console.WriteLine(x.Value.ToString());
+            //Trees.Node<int> parent=null;
+            //var xx = bst.getNode(2, out parent);
+            //Console.WriteLine(x.Value.ToString());
+            //var max = bst.getMaxNode();
+            //Console.WriteLine(max != null ? max.Value.ToString() : "NONE");
+            //var min = bst.getMinNode();
+            //Console.WriteLine(min != null ? min.Value.ToString() : "NONE");
 
 
 
-            List<Trees.Node<int>> lst = new List<Trees.Node<int>>();
-            bst.inOrder(bst.Root, ref lst);
-            lst = new List<Trees.Node<int>>();
-            bst.preOrder(bst.Root, ref lst);
-            lst = new List<Trees.Node<int>>();
-            bst.postOrder(bst.Root, ref lst);
+            //List<Trees.Node<int>> lst = new List<Trees.Node<int>>();
+            //bst.inOrder(bst.Root, ref lst);
+            //lst = new List<Trees.Node<int>>();
+            //bst.preOrder(bst.Root, ref lst);
+            //lst = new List<Trees.Node<int>>();
+            //bst.postOrder(bst.Root, ref lst);
 
 
 

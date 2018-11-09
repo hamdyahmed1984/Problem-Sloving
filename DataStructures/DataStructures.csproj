@@ -54,6 +54,7 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Trees\BST.cs" />
+    <Compile Include="Trees\MerkleTree.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

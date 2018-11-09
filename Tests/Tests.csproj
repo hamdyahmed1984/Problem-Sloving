@@ -63,6 +63,10 @@
       <Project>{57b7652f-7bab-4158-955c-b9b0b394ab17}</Project>
       <Name>Cracking</Name>
     </ProjectReference>
+    <ProjectReference Include="..\DataStructures\DataStructures.csproj">
+      <Project>{a38414a5-1839-4f27-8bee-15b2dfd7b17d}</Project>
+      <Name>DataStructures</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
