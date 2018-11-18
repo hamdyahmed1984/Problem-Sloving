@@ -13,47 +13,96 @@ namespace DesignPatterns
     {
         static void Main(string[] args)
         {
+            #region
+            #endregion
+
+            #region
+            #endregion
+
+            #region
+            #endregion
+
+            #region
+            #endregion
+
+            #region
+            #endregion
+
+            #region Facade Pattern Test
+
+            Lights lights = new Lights();
+            DVD dvd = new DVD();
+            Projector projector = new Projector();
+
+            HomeTheatreFacade theatreFacade = new HomeTheatreFacade(lights, dvd, projector);
+            theatreFacade.WatchMovie("3 idiots");
+            theatreFacade.EndMovie("3 idiots");
+
+            #endregion
+
+            #region Adapter Pattern Test
+
+            //MallardDuck duck = new MallardDuck();
+            //WildTurkey wildTurkey = new WildTurkey();
+            //Duck turkeyAdapter= new TurkeyAdapter(wildTurkey);
+
+            //Console.WriteLine("duck says:");
+            //duck.Quak();
+            //duck.Fly();
+
+            //Console.WriteLine("wildTurkey says:");
+            //wildTurkey.Gobble();
+            //wildTurkey.Fly();
+
+            //Console.WriteLine("turkeyAdapter says:");
+            //turkeyAdapter.Quak();
+            //turkeyAdapter.Fly();
+
+            #endregion
+
 
             #region Command Pattern Test
-            RemoteControl rc = new RemoteControl();
-            
-            Light livingRoomLight = new Light("Living Room");
-            Light kitchenLight=new Light("Kitchen");
-            Garage garage=new Garage();
-            Fan fan = new Fan("Bedroom");
 
-            LightOnCommand livingRoomLightOnCommand = new LightOnCommand(livingRoomLight);
-            LightOffCommand livingRoomLightOffCommand=new LightOffCommand(livingRoomLight);
+            //RemoteControl rc = new RemoteControl();
 
-            LightOnCommand kitchenLightOnCommand = new LightOnCommand(kitchenLight);
-            LightOffCommand kitchenLightOffCommand = new LightOffCommand(kitchenLight);
+            //Light livingRoomLight = new Light("Living Room");
+            //Light kitchenLight=new Light("Kitchen");
+            //Garage garage=new Garage();
+            //Fan fan = new Fan("Bedroom");
 
-            GarageOpenCommand garageOpenCommand=new GarageOpenCommand(garage);
-            GarageCloseCommand garageCloseCommand=new GarageCloseCommand(garage);
+            //LightOnCommand livingRoomLightOnCommand = new LightOnCommand(livingRoomLight);
+            //LightOffCommand livingRoomLightOffCommand=new LightOffCommand(livingRoomLight);
 
-            FanOffCommand fanOffCommand=new FanOffCommand(fan);
-            FanHighCommand fanHighCommand=new FanHighCommand(fan);
+            //LightOnCommand kitchenLightOnCommand = new LightOnCommand(kitchenLight);
+            //LightOffCommand kitchenLightOffCommand = new LightOffCommand(kitchenLight);
 
-            rc.SetCommand(0, livingRoomLightOnCommand, kitchenLightOffCommand);
-            rc.SetCommand(1, kitchenLightOnCommand, kitchenLightOffCommand);
-            rc.SetCommand(2, garageOpenCommand, garageCloseCommand);
-            rc.SetCommand(3, fanHighCommand, fanOffCommand);
+            //GarageOpenCommand garageOpenCommand=new GarageOpenCommand(garage);
+            //GarageCloseCommand garageCloseCommand=new GarageCloseCommand(garage);
 
-            Console.WriteLine(rc.ToString());
-            rc.OnButtonPushed(0);
-            rc.OnButtonPushed(1);
-            rc.OnButtonPushed(2);
-            rc.OffButtonPushed(1);
-            rc.OnButtonPushed(3);
-            rc.OnButtonPushed(7);
-            rc.Undo();
-            rc.Undo();
-            rc.Undo();
-            rc.Undo();
-            rc.Undo();
-            rc.Undo();
-            rc.Undo();
-            Console.WriteLine(rc.ToString());
+            //FanOffCommand fanOffCommand=new FanOffCommand(fan);
+            //FanHighCommand fanHighCommand=new FanHighCommand(fan);
+
+            //rc.SetCommand(0, livingRoomLightOnCommand, kitchenLightOffCommand);
+            //rc.SetCommand(1, kitchenLightOnCommand, kitchenLightOffCommand);
+            //rc.SetCommand(2, garageOpenCommand, garageCloseCommand);
+            //rc.SetCommand(3, fanHighCommand, fanOffCommand);
+
+            //Console.WriteLine(rc.ToString());
+            //rc.OnButtonPushed(0);
+            //rc.OnButtonPushed(1);
+            //rc.OnButtonPushed(2);
+            //rc.OffButtonPushed(1);
+            //rc.OnButtonPushed(3);
+            //rc.OnButtonPushed(7);
+            //rc.Undo();
+            //rc.Undo();
+            //rc.Undo();
+            //rc.Undo();
+            //rc.Undo();
+            //rc.Undo();
+            //rc.Undo();
+            //Console.WriteLine(rc.ToString());
+
             #endregion
 
             #region Singleton Pattern Test
