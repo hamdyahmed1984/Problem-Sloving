@@ -43,10 +43,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Behavioral\Command.cs" />
     <Compile Include="Behavioral\Observer.cs" />
     <Compile Include="Behavioral\Strategy.cs" />
     <Compile Include="Creational\AbstractFactory.cs" />
     <Compile Include="Creational\FactoryMethod.cs" />
+    <Compile Include="Creational\Singleton.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Structural\Decorator.cs" />

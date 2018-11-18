@@ -13,14 +13,65 @@ namespace DesignPatterns
     {
         static void Main(string[] args)
         {
-            #region Abstract Factory Pattern Test
-            NYPizzaStoreConcreteFactory nyStore = new NYPizzaStoreConcreteFactory();
-            nyStore.OrderPizza("cheese");
-            nyStore.OrderPizza("veggie");
 
-            ChicagoPizzaStoreConcreteFactory chicagoStore = new ChicagoPizzaStoreConcreteFactory();
-            chicagoStore.OrderPizza("cheese");
-            chicagoStore.OrderPizza("veggie");
+            #region Command Pattern Test
+            RemoteControl rc = new RemoteControl();
+            
+            Light livingRoomLight = new Light("Living Room");
+            Light kitchenLight=new Light("Kitchen");
+            Garage garage=new Garage();
+            Fan fan = new Fan("Bedroom");
+
+            LightOnCommand livingRoomLightOnCommand = new LightOnCommand(livingRoomLight);
+            LightOffCommand livingRoomLightOffCommand=new LightOffCommand(livingRoomLight);
+
+            LightOnCommand kitchenLightOnCommand = new LightOnCommand(kitchenLight);
+            LightOffCommand kitchenLightOffCommand = new LightOffCommand(kitchenLight);
+
+            GarageOpenCommand garageOpenCommand=new GarageOpenCommand(garage);
+            GarageCloseCommand garageCloseCommand=new GarageCloseCommand(garage);
+
+            FanOffCommand fanOffCommand=new FanOffCommand(fan);
+            FanHighCommand fanHighCommand=new FanHighCommand(fan);
+
+            rc.SetCommand(0, livingRoomLightOnCommand, kitchenLightOffCommand);
+            rc.SetCommand(1, kitchenLightOnCommand, kitchenLightOffCommand);
+            rc.SetCommand(2, garageOpenCommand, garageCloseCommand);
+            rc.SetCommand(3, fanHighCommand, fanOffCommand);
+
+            Console.WriteLine(rc.ToString());
+            rc.OnButtonPushed(0);
+            rc.OnButtonPushed(1);
+            rc.OnButtonPushed(2);
+            rc.OffButtonPushed(1);
+            rc.OnButtonPushed(3);
+            rc.OnButtonPushed(7);
+            rc.Undo();
+            rc.Undo();
+            rc.Undo();
+            rc.Undo();
+            rc.Undo();
+            rc.Undo();
+            rc.Undo();
+            Console.WriteLine(rc.ToString());
+            #endregion
+
+            #region Singleton Pattern Test
+
+            //Singleton s1 = Singleton.Createinstance();
+            //Singleton s2 = Singleton.Createinstance();
+            //Console.WriteLine(s1 == s2);
+
+            #endregion
+
+            #region Abstract Factory Pattern Test
+            //NYPizzaStoreConcreteFactory nyStore = new NYPizzaStoreConcreteFactory();
+            //nyStore.OrderPizza("cheese");
+            //nyStore.OrderPizza("veggie");
+
+            //ChicagoPizzaStoreConcreteFactory chicagoStore = new ChicagoPizzaStoreConcreteFactory();
+            //chicagoStore.OrderPizza("cheese");
+            //chicagoStore.OrderPizza("veggie");
             #endregion
 
             #region Factory Method Pattern Test
