@@ -20,23 +20,36 @@ namespace DesignPatterns
             #endregion
 
             #region
+            DuckSimulator simulator = new DuckSimulator();
+            AbstractDuckFactory duckFactory = new CountingDuckFactory();
+            simulator.Simulate(duckFactory);
             #endregion
 
-            #region
+            #region Iterator Pattern Test
+            //BreakfastMenu breakfastMenu=new BreakfastMenu();
+            //DinnerMenu dinnerMenu = new DinnerMenu();
+            //Waitress w =new Waitress(breakfastMenu, dinnerMenu);
+            //w.PrintMenu();
+
             #endregion
 
-            #region
+            #region Template Method Pattern Test
+            //Tea tea = new Tea();
+            //Coffee coffee=new Coffee();
+
+            //tea.PrepareBeverage();
+            //coffee.PrepareBeverage();
             #endregion
 
             #region Facade Pattern Test
 
-            Lights lights = new Lights();
-            DVD dvd = new DVD();
-            Projector projector = new Projector();
+            //Lights lights = new Lights();
+            //DVD dvd = new DVD();
+            //Projector projector = new Projector();
 
-            HomeTheatreFacade theatreFacade = new HomeTheatreFacade(lights, dvd, projector);
-            theatreFacade.WatchMovie("3 idiots");
-            theatreFacade.EndMovie("3 idiots");
+            //HomeTheatreFacade theatreFacade = new HomeTheatreFacade(lights, dvd, projector);
+            //theatreFacade.WatchMovie("3 idiots");
+            //theatreFacade.EndMovie("3 idiots");
 
             #endregion
 
